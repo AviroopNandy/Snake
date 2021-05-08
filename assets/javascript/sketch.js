@@ -40,7 +40,7 @@ function draw() {
     snake.show();
 
     if (snake.endGame()) {
-        print("END GAME");
+        end.innerHTML += `<h3>The game has ended!</h3>`;
         background(255, 0, 0);
         noLoop();
     }
