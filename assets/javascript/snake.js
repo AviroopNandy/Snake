@@ -6,6 +6,7 @@ class Snake {
         this.xdir = 0;
         this.ydir = 0;
         this.len = 0;
+        this.score = 0;
     }
     
     setDir(x, y) {
@@ -24,7 +25,9 @@ class Snake {
     grow() {
         let head = this.body[this.body.length-1].copy();
         this.len++;
+        this.score++;
         this.body.push(head);
+        document.getElementById("score").innerHTML = this.score;
     }
     
     endGame() {

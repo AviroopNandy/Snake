@@ -1,4 +1,6 @@
 let end = document.getElementById("end");
+let welcome = document.getElementById("welcome");
+let restart = document.getElementById("restart");
 let snake;
 let res = 20;   //resolution
 let food;
@@ -40,7 +42,9 @@ function draw() {
     snake.show();
 
     if (snake.endGame()) {
-        end.innerHTML += `<h3>The game has ended!</h3>`;
+        welcome.style.display = "none";
+        end.innerHTML += `<h1>The game has ended!</h1>`;
+        restart.style.display = "block";
         background(255, 0, 0);
         noLoop();
     }
